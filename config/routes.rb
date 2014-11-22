@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   #setup root home page as refer to controller and page 
   root 'home#homepage'
+  get '/goodbye' => 'home#goodbye'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

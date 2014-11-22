@@ -1,4 +1,13 @@
-<b>Hello World</b>
+<b>Welcome to Message Board </b><br>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+ 
+
+<% if user_signed_in? %>
+	Hey, <%= current_user.email %> <br>
+
+	<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+<% else %>
+	<a href="/users/sign_in">sign in</a>
+	<a href="/users/sign_up">sign up</a>
+
+<% end %>
